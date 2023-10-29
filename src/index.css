@@ -1,99 +1,634 @@
-.container {
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Yesteryear&display=swap');
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:"Manrope", sans-serif;
+  background-color: whitesmoke;
+}
+
+.sticky__header {
   width: 100%;
-  height: 100%;
+  height: 80px;
+  line-height: 80px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background: white;
+  box-shadow: 3px 3px -8px 3px #ddd;
+}
+
+.header {
+  display: flex; 
+  align-items: center; 
+  height: 70px;
   position: relative;
-  background: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
 }
 
-.background-image {
+.container {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem; 
+  max-width: 100%; 
+  width: 1440px;
+}
+
+.buttons {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+
+}
+
+.logo {
+  display: block;
+  padding: 5px;
+  width: 150px;
+
+}
+.no-underline {
   width: 100%;
-  height: 766px;
-  left: 0;
-  top: 0;
-  position: absolute;
 }
-
-.background-image img {
+.no-underline img {
   width: 100%;
-  height: 766px;
-  left: 0;
-  top: 0;
-  position: absolute;
+
 }
 
-.overlay {
-  width: 100%;
-  height: 766px;
-  left: 0;
-  top: 0;
-  position: absolute;
-  background: rgba(38, 38, 38, 0.13);
+
+
+.navLinks {
+  display: flex; 
+  align-items: center; 
 }
 
-.title {
-  left: 547px;
-  top: 306px;
-  position: absolute;
-  color: white;
-  font-size: 157.43px;
-  font-family: 'Yesteryear';
-  font-weight: 400;
-  line-height: 223.68px;
-  word-wrap: break-word;
+.toggleMenu {
+  display: flex; 
+  gap: 1rem; 
+  align-items: center; 
+
 }
 
-/* Define other classes for your elements in a similar way */
 
-/* Container styles */
-/* .container {
-  width: 1328px;
-  height: 1641px;
-  left: 277px;
-  top: 829px;
-  position: absolute;
-  background: white;
-  box-shadow: 0px 4px 48px 12px rgba(0, 0, 0, 0.09);
-} */
+  .navigation .navLink{
+    gap: 1.5rem;
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navigation .navLink .nav-link {
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .home-page {
+    position: relative;
+    text-align: center;
+  }
+  
+  .background-image {
+    width: 100%;
+    height: 500px;
+    max-width: 100%;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 70px;
+    font-family: 'Yesteryear', cursive;
+  }
+  
 
-/* Main Content styles */
-.main-content {
-  width: 504px;
-  height: 723px;
-  left: 1041px;
-  top: 1262px;
-  position: absolute;
+  /* contact.css */
+
+.contact-section {
+  padding: 2rem;
 }
 
-.main-background {
-  width: 504px;
-  height: 369.17px;
-  left: 0;
-  top: 0;
-  position: absolute;
-  background: #EDEDED;
+.contact-container {
+  max-width: 768px;
+  margin: 0 auto;
 }
 
-.content {
-  width: 413.89px;
-  height: 152.70px;
-  left: 57.63px;
-  top: 81.18px;
-  position: absolute;
+.contact-heading {
   text-align: center;
-  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-description {
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  width: 40%;
+  height: 20%;
+  background-color: #0077b6;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/* doctor-details.css */
+
+.doctor-details-section {
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+.doctor-image {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.badge {
+  background-color: #CCF0F3;
+  color: #0077b6;
+  padding: 1rem 6rem;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.doctor-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 3rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.rating-icon img {
+  width: 16px;
+}
+
+.rating-count {
+  font-size: 14px;
+  color: #333;
+}
+
+.doctor-description {
+  font-size: 14px;
+  margin-top: 50px;
+  border-bottom: 1px solid rgba(0, 102, 255, 0.2);
+}
+
+.tabs {
+  margin-top: 50px;
+  border-bottom: 1px solid rgba(0, 102, 255, 0.2);
+}
+
+.tab-button {
+  border: none;
+  padding: 2rem 5rem;
+  margin-right: 5rem;
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #0077b6;
+  cursor: pointer;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #0077b6;
+}
+
+.tab-content {
+  margin-top: 50px;
+}
+
+/* Add styles for DoctorAbout and Feedback components if needed */
+
+
+/* doctor-card.css */
+
+.doctor-card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-image {
+  width: 100%;
+}
+
+.doctor-image img {
+  border-radius: 2%;
+}
+
+.doctor-name {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-top: 0.75rem;
+}
+
+.doctor-info {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.specialization-badge {
+  background-color: #CCF0F3;
+  color: #0077b6;
+  padding: 0.25rem 0.5rem;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.total-rating {
+  font-size: 14px;
+  line-height: 21px;
   font-weight: 400;
-  line-height: 26px;
+  color: #333;
+}
+
+.patient-info {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.patient-count {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.hospital-info {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333;
+}
+
+.arrow-link {
+  width: 44px;
+  height: 44px;
+  border: 2px solid #181A1E;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.arrow-link:hover {
+  background-color: #0077b6;
+  border: none;
+}
+
+.arrow-icon {
+  width: 24px;
+  height: 20px;
+  color: #333;
+}
+
+/* doctor-list.css */
+
+.doctor-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  margin-top: 30px;
+}
+
+@media (min-width: 640px) {
+  .doctor-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .doctor-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+.details-cont {
+  padding: 1.25rem; 
+  max-width: 1170px;
+  
+}
+
+.details-subcont {
+  display: grid; 
+}
+
+.details-main {
+  display: flex; 
+  gap: 1.25rem; 
+  align-items: center; 
+}
+
+.details-figure {
+  max-width: 200px;
+  max-height: 200px;
+
+}
+
+@media (min-width: 768px) {
+  .details-subcont{
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  }
+}
+
+@media (min-width: 768px) { 
+  .details-img {
+
+    grid-column: span 2 / span 2; 
+  }
+ }
+
+.detail-span {
+  padding-top: 0.25rem;
+padding-bottom: 0.25rem; 
+padding-left: 1.5rem;
+padding-right: 1.5rem; 
+line-height: 1rem; 
+color: 12px;
+}
+
+.switzerland {
+  margin-top: 0.75rem; 
+line-height: 2.25rem; 
+color: 22px;
+
+}
+
+.vikrant {
+  display: flex; 
+align-items: center; 
+}
+
+.harsh {
+  display: flex; 
+align-items: center; 
+font-weight: 600; 
+line-height: 1.25rem; 
+
 }
 
 
-
-.tour-image {
-  width: 670px;
-  height: 420px;
-  left: 934px;
-  top: 1715px;
-  position: absolute;
+@media (min-width: 1024px) { 
+  .harsh {
+  line-height: 1.75rem; 
+color: 16px;
+ }
 }
 
+.arin {
+  line-height: 1.25rem; 
+  color: 14px;
+}
+
+.detail-text {
+  line-height: 1.25rem; 
+color: 14px;
+
+}
+
+@media (min-width: 768px) { 
+  .detail-text{
+    color: 15px;
+
+  }
+ }
+@media (min-width: 1024px) { 
+  .detail-text{
+
+    max-width: 390px;
+  }
+ }
+
+ .detail-location {
+   line-height: 1.25rem; 
+  color: 14px;
+
+ }
+
+.img-size {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-radius: 2%; 
+}
+
+@media (min-width: 768px) { 
+  .detail-location {
+
+    color: 15px;
+  }
+ }
+@media (min-width: 1024px) { 
+  .detail-location {
+
+    max-width: 390px;
+  }
+ }
+
+
+
+@media (min-width: 1024px) { 
+  .arin {
+    line-height: 1.75rem; 
+  color: 16px;
+  }
+ }
+
+
+@media (min-width: 1024px) { 
+ .detail-span {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; 
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; 
+  line-height: 1.75rem; 
+  color: 16px;
+ }
+ }/* slide-panel.css */
+
+
+ .about-feed {
+  border-bottom-width: 1px; 
+  border-style: solid; 
+  margin-top: 50px;
+  border-color: #0066ff34;
+ }
+
+ .sub-panel {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+ }
+
+.about {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; 
+  padding-left: 1.25rem;
+  padding-right: 1.25rem; 
+  margin-right: 1.25rem; 
+  font-weight: 600; 
+  line-height: 1.75rem; 
+  color: 16px;
+
+}
+
+.feed {
+  padding-top: 0.5rem;
+padding-bottom: 0.5rem; 
+padding-left: 1.25rem;
+padding-right: 1.25rem; 
+margin-right: 1.25rem; 
+font-weight: 600; 
+line-height: 1.75rem; 
+color: 16px;
+}
+
+/* doctor-about.css */
+
+.about-title {
+  font-size: 20px;
+  line-height: 30px;
+  color: #333; /* You can adjust the color to match your design */
+  font-weight: 600;
+}
+
+.doctor-name {
+  color: #0055ff; /* Adjust the color as needed */
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.text-para {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+}
+
+/* Define styles for education and experience sections similarly */
+
+
+.book-button {
+  display: flex; 
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; 
+  justify-content: center; 
+  border-radius: 0.375rem; 
+  font-weight: 500; 
+  color: #ffffff; 
+  background-color: #0055ff;
+  text-decoration: none;
+}
+
+.slide-panel {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+  border-radius: 0.375rem;
+}
+
+.panel-title {
+  font-weight: 600;
+}
+
+.fee {
+  font-size: 1rem;
+}
+
+.time-slots {
+  margin-top: 1.875rem;
+}
+
+.time-slot {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.book-button {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border-radius: 0.375rem;
+}
